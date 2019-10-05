@@ -2,7 +2,7 @@ name: Test, Build and Release apk
 on:
   push:
     tags:
-      - 'V1'
+      - '*'
 jobs:
   build:
     name: Build APK
