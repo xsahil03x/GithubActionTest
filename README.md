@@ -1,6 +1,6 @@
 # github_action_test
 
-[![](https://github.com/xsahil03x/GithubActionTest/workflows/Test,%20Build%20and%20Release%20apk/badge.svg)](https://github.com/xsahil03x/GithubActionTest/actions)
+[![](https://github.com/xsahil03x/GithubActionTest/workflows/Test%20and%20Build%20Apk/badge.svg)](https://github.com/xsahil03x/GithubActionTest/actions)
 
 A new Flutter project.
 
