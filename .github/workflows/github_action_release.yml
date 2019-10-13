@@ -15,11 +15,15 @@ jobs:
     - uses: subosito/flutter-action@v1
       with:
         channel: 'stable'
-    - run: flutter pub get
-    - run: flutter test
-    - run: flutter analyze .
-    - run: flutter build apk --debug --split-per-abi
-    - name: Create a Release APK
+    - name: Install dependencies
+      run: flutter pub get
+    - name: Running Analyzer
+      run: flutter analyze .
+    - name: Running tests
+      run: flutter test
+    - name: Building Release APKs
+      run: flutter build apk --release --split-per-abi
+    - name: Uploading APKs
       uses: ncipollo/release-action@v1
       with:
         artifacts: "build/app/outputs/apk/debug/*.apk"
