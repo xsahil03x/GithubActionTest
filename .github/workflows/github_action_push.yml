@@ -1,5 +1,5 @@
 on: push
-name: Test, Build and Release apk
+name: Test and Build Apk
 jobs:
   build:
     name: Build APK
@@ -16,8 +16,3 @@ jobs:
     - run: flutter test
     - run: flutter analyze .
     - run: flutter build apk --debug --split-per-abi
-    - name: Create a Release APK
-      uses: ncipollo/release-action@v1
-      with:
-        artifacts: "build/app/outputs/apk/debug/*.apk"
-        token: ${{ secrets.GITHUB_TOKEN }}
