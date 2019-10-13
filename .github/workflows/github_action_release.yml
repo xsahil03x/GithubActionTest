@@ -17,13 +17,13 @@ jobs:
         channel: 'stable'
     - name: Install dependencies
       run: flutter pub get
-    - name: Running Analyzer
+    - name: Run Analyzer
       run: flutter analyze .
-    - name: Running tests
+    - name: Run tests
       run: flutter test
-    - name: Building Release APKs
+    - name: Build Release APKs
       run: flutter build apk --release --split-per-abi
-    - name: Uploading APKs
+    - name: Upload APKs
       uses: ncipollo/release-action@v1
       with:
         artifacts: "build/app/outputs/apk/debug/*.apk"
