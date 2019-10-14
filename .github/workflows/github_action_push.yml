@@ -18,5 +18,12 @@ jobs:
       run: flutter analyze .
     - name: Run tests
       run: flutter test
+    - name: Collect Coverage
+      run: ./tool/test_with_coverage.sh
+      shell: bash
+    - name: Report CodeCov
+      uses: codecov/codecov-action@v1.0.2
+      with:
+        token: ${{secrets.CODECOV_TOKEN}}
     - name: Build Release Apks
       run: flutter build apk --release --split-per-abi
