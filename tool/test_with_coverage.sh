@@ -20,7 +20,7 @@ dart \
     --enable-vm-service=$OBS_PORT \
     --pause-isolates-on-exit  \
     --enable-asserts \
-    test/resultk_test.dart
+    test/widget_test.dart
 
 pub global run coverage:format_coverage \
     --lcov \
