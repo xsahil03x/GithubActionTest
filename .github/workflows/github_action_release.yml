@@ -21,6 +21,9 @@ jobs:
       run: flutter analyze .
     - name: Run tests
       run: flutter test
+    - name: Collect Coverage
+      run: ./tool/test_with_coverage.sh
+      shell: bash
     - name: Report CodeCov
       uses: codecov/codecov-action@v1.0.2
       with:
@@ -32,3 +35,6 @@ jobs:
       with:
         artifacts: "build/app/outputs/apk/debug/*.apk"
         token: ${{ secrets.GITHUB_TOKEN }}
+        file: ./coverage.xml
+        flags: unittests
+        name: codecov-umbrella
