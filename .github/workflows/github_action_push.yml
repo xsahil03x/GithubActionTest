@@ -19,7 +19,7 @@ jobs:
     - name: Run tests
       run: flutter test
     - name: Collect Coverage
-      run: flutter test --coverage --coverage-path=../../github_action_test.lcov
+      run: flutter test --coverage
     - name: Report CodeCov
       uses: codecov/codecov-action@v1.0.2
       with:
