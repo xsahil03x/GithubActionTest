@@ -22,8 +22,7 @@ jobs:
     - name: Run tests
       run: flutter test
     - name: Collect Coverage
-      run: ./tool/test_with_coverage.sh
-      shell: bash
+      run: flutter test --coverage --coverage-path=../../github_action_test.lcov
     - name: Report CodeCov
       uses: codecov/codecov-action@v1.0.2
       with:
@@ -35,6 +34,5 @@ jobs:
       with:
         artifacts: "build/app/outputs/apk/debug/*.apk"
         token: ${{ secrets.GITHUB_TOKEN }}
-        file: ./coverage.xml
+        file: ../../github_action_test.lcov
         flags: unittests
-        name: codecov-umbrella

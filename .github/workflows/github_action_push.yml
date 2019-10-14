@@ -19,14 +19,12 @@ jobs:
     - name: Run tests
       run: flutter test
     - name: Collect Coverage
-      run: sudo ./tool/test_with_coverage.sh
-      shell: bash
+      run: flutter test --coverage --coverage-path=../../github_action_test.lcov
     - name: Report CodeCov
       uses: codecov/codecov-action@v1.0.2
       with:
         token: ${{secrets.CODECOV_TOKEN}}
-        file: ./coverage.xml
+        file: ../../github_action_test.lcov
         flags: unittests
-        name: codecov-umbrella
     - name: Build Release Apks
       run: flutter build apk --release --split-per-abi
