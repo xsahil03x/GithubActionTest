@@ -3,8 +3,6 @@
 [![](https://github.com/xsahil03x/GithubActionTest/workflows/Test%20and%20Build%20Apk/badge.svg)](https://github.com/xsahil03x/GithubActionTest/actions)
 [![CodeCov](https://codecov.io/gh/xsahil03x/GithubActionTest/branch/master/graph/badge.svg)](https://codecov.io/gh/xsahil03x/GithubActionTest)
 
-A new Flutter project.
-
 ## Getting Started
 
 This project is a starting point for a Flutter application.
